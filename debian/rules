@@ -1,4 +1,12 @@
 #!/usr/bin/make -f
+get-orig-source:
+	dh_testdir
+	git archive --worktree-attributes \
+		--prefix django-ldapdb-0.1.0/ \
+		--format tar \
+		HEAD | gzip -9c > \
+	$(CURDIR)/../django-ldapdb_0.1.0.orig.tar.gz
+
 override_dh_pysupport:
 	dh_python2
 
@@ -7,4 +15,5 @@ override_dh_pysupport:
 
 %:
 	dh --with python2 $@
+#	dh $@
 
