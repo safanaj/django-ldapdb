@@ -1,0 +1,23 @@
+Source: django-ldapdb
+Section: python
+Priority: optional
+X-Python-Version: >= 2.5
+Maintainer: Marco Bardelli <marco.bardelli@aderit.it>
+Build-Depends: debhelper (>= 7.0.50~), quilt, python (>= 2.6.6-3~)
+Standards-Version: 3.9.2
+Homepage: http://opensource.bolloretelecom.eu/projects/django-ldapdb/
+
+Package: python-django-ldapdb
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-django (>= 1.1), python-ldap
+Recommends: apache2, libapache2-mod-wsgi | libapache2-mod-python
+X-Python-Version: ${python:Versions}
+Provides: ${python:Provides}
+Description: support for django models over LDAP
+ django-ldapdb is an LDAP database backend for Django. It allows you
+ to manipulate LDAP entries using Django's models. Declaring models
+ using the LDAP backend is very staightforward, you simply inherit
+ from ldapdb.models.Model and declare the fields in the same way as
+ for regular models. You can even edit the LDAP entries using Django's
+ admin interface.
+

@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+override_dh_pysupport:
+	dh_python2
+
+# override_dh_builddeb:
+# 	@echo DO NOT BUILDDEB
+
+%:
+	dh --with python2 $@
+

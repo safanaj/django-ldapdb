@@ -1,0 +1,6 @@
+django-ldapdb (0.1.0-aderit0) unstable; urgency=low
+
+  * Initial package
+
+ -- Marco Bardelli <marco.bardelli@aderit.it>  Tue, 12 Jun 2012 22:06:59 +0200
+
